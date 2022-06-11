@@ -1,0 +1,38 @@
+                                                                 #DOCKER#
+#TO CREATE CONTAINER FROM IMAGE
+
+1)after connecting to ec2, the first thing we have to do that we have to install docker after logging into root user..
+command for installation of docker yum install docker -y
+
+2)after installation of docker, we have to restart the system for downloading the search engine
+note:>before not restarting the system, if try to pull image from dockerhub, it doesnt exist, y becz we only have client engine(docker client)
+     >docker client----------docker deamon-----------docker hub
+     >before not restarting the system,check docker version,we only have client server not existed docker deamon yet
+     >docker version command
+
+note2:if we want to create a container, first, we should have an image(without image we cannt create a container)
+     :if there is no image existed in local client,we can download or pull an image from docker hub
+ 
+3)command for pulling an image from docker hub: docker pull some image name
+
+4)now, we have an image(pulled some image from dockerhyb)
+
+5)command for creation of acontainer : docker run -it --name <containername> <image name>
+                                     : docker run -it --name <containername> <image name> /bin/bash
+ (/bin/bash= we can interact with shell)                                       
+
+6)now container has been created
+
+7)command for checking an image list : docker images ls
+
+8)command for checking stopped containers list : docker ps -a
+
+note;
+difference b/w docker ps and docker ps -a 
+ 1)docker ps means it shows the ruunning containers list
+ 2)docker ps -a means it shows the running containers list along with stopped containers
+
+9)now,lets know about getting into container (logging in)
+  first we have to start the container by giving this command docker start >container name> nd after that we have to attach by giving this command 
+docker attach <container name>
+now, fynally we get into the container

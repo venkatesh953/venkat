@@ -1,0 +1,73 @@
+                                                                     #DOCKER#
+
+#TO CREATE A CONTAINER FROM IMAGE
+
+note:
+the first thing we have to keep in our mind that we wil have to create a container nd get into it
+
+docker run -it --name <container name> image name /bin/bash
+
+1)i have created a container now nd now i m going create some files, directories nd packages in it
+
+after creation of the container, i have already inside the container
+ touch file1
+ cat>file1
+inserting some data in file1
+save the file1 with ctrl+D
+giving ll
+now existed file1 in this container 
+nd seeing info in file1 by cat file1
+
+now, i m installing some packages in it
+note: if ubuntu image, we have to give apt instead of yum( if base image ubuntu)
+
+before installing some package, we have to give update for image once
+
+apt update -y
+
+now installing
+
+apt install git -y
+.
+.
+.
+.
+installed git package in this container
+
+checking now 
+ll
+existed files, i can see
+git --version
+i can see installed package version
+
+now i m getting out from this container by giving exit
+
+fynally, a container has bben created along with some files nd packages
+
+
+out main objective is to create an image from container 
+
+first thing. we have to commit this container nd need to update the image...
+
+docker commit <container name>(previous cont name) update image name(need to give new name to this image)(already we have base image,from that we created a container)
+
+check docker images now
+docker images ls
+new image has been created in that list by giving with our own name
+
+
+now i wil create a container with this newly created image(everything wil be replicated into new container from which image os,data etcc)
+ docker run -it --name <container name> updated image name /bin/bash
+
+created a container nd inside 
+
+i wil check in this image' softwears,files from where this image came from(container)
+
+ll
+i can see files where i created before, it wil replicate here
+yeah, i can see file1 that i created in previous cont
+git vesion 
+yeah, i can see git version
+
+
+same process for creating files nd softwears nd building them with new image.......

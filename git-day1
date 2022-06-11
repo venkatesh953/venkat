@@ -1,0 +1,114 @@
+#DAY-1                     #GIT#(VCS OR SCM)
+
+
+1)Git is not a tool, it is a package.
+2)it is a verson control system(vcs) or source code management(scm).
+3)it is used to track the changes in files.
+4)and wil maintain multiple of versions of same file.
+5)platform independent, free and open source.
+6)can handle larger projects efficiently.
+7)save time and developers can fetch and pull requests without swtiching.
+
+
+NOTE:
+
+1)git is a 3rd generation tool in version control system.
+
+EXAMPLE FOR FEW FREE TOOLS FOR SCM:
+Git, SVN
+
+EXAMPLE FOR FEW PAID TOOLS FOR SCM:
+Bit bucket, P4, Stash
+
+                          #Git Stages# (3stages)
+
+*Working Directory
+*Staging Area
+*Repository
+
+1)Working Directory:
+i)In this stsge, git is only aware of having files in the project.
+ii)It wont track these files until we committhose files.
+
+2)Staging Area:
+i)suppose, we have some files now
+ii)we should have to add those file nd they wil come into staging area.
+iii)Staging area wil come before commit.
+
+3)Repository:
+i)Repository is ntg bt,we can say that it is a directory or folder.
+ii)Reposity in git is considered as project folder.
+iii)A repository has all project related data.
+iv)It contains collection of files nd history of changes made to those files.
+
+
+types of repos in git:
+*Local Repo
+*Central Repo
+*Remote REPO
+
+i)LOCAL REPO:
+      the local repository is everything in .git directory. Mainly what we see in our local repository that all of our commmits
+and checkpoints. It is an area that saves everything.
+
+ii)CENTRAL REPO:
+      Central repo means where we can store all our source code and make it available for others to chcek it and change it simply
+This is what we called GITHUB.
+
+iii)REMOTE REPO:
+     Remote repo means the repository which is located in a remote system. we send our code to remote repo to anyone which is 
+residing in remote location.
+
+NOTE2:
+Diff types of repositories in GIT:
+i)LOCAL REPO ii)CENTRAL REPO iii)REMOTE REPO
+
+Diff types of repositories in GITHUB:
+i)PUBLIC REPO ii)PRIVATE REPO
+
+NOTE3:
+i)MASTER BRANCH is the default branch in GIT.
+ii)MAIN BRANCH is the default branch in GITHUB.
+
+
+After installing the git, we wil have to initiate the git. Then only, .git file wil be existed in hidden files.
+we should not remove this file not to get an errors.
+
+Lets see practically now
+
+
+SOME IMP COMMANDS:
+yum install git -y
+git init .
+git -version
+
+STEPS TO COMMIT A FILE:
+  Suppose, now we have a file1
+
+TO ADD A FILE THEN COMMAND:
+git add filename
+
+TO COMMIT A FILE WITH A MSG THEN COMMAND:
+git commit -m "commitb msg we want" filename
+
+TO SEE THE DETAILS OF THE FILE THEN THE COMMAND:
+git log or git log --oneline git log --graph line
+
+TO SEE THE UNTRACKED FILES LIST ND DELETED FILES THEN COMMAND:
+git status 
+
+suppose we want to configure of user then the command:
+git config user.name "somename" filename
+git config user.email "someemail" filename
+
+suppose, we want to restore some deleted file then the command(recently files can be restored):
+git restore filename
+
+NOTE4)
+
+i)File wont be commited until we dont add that file. so, we should add that file nd commit.
+ii)The untracked files are ntgt but, they are ready to be committed.
+
+
+
+                                        
